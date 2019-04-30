@@ -1,0 +1,33 @@
+<h1>Listing company</h1>
+<%= link_to 'My Company', controller: 'company' %>
+ <%= link_to 'New company', new_company_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Country_id</th>
+    <th>State_id</th>
+    <th>City_id</th>
+    <th>Postcode</th>
+    <th>Start_date</th>
+    <th>Active</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @company.each do |company| %>
+    <tr>
+      <td><%= company.name %></td>
+      <td><%= company.country_id %></td>
+      <td><%= company.state_id %></td>
+      <td><%= company.city_id %></td>
+      <td><%= company.postcode %></td>
+      <td><%= company.start_date %></td>
+      <td><%= company.active %></td>
+      <td><%= link_to 'Show', company_path(company) %></td>
+      <td><%= link_to 'Edit', edit_company_path(company) %></td>
+      <td><%= link_to 'Destroy', company_path(company),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+

@@ -1,0 +1,22 @@
+<h1>Editing company</h1>
+<%#= render 'form' %>
+ 
+ <%#= link_to 'Back', company_path %>
+
+ 
+<%#= form_for :company, url: company_path(@company), method: :patch do |f| %>
+<%= form_for :company, url: company_path, method: :put do |f| %>
+
+ 
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
