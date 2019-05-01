@@ -31,6 +31,16 @@ class UserRolesController < ApplicationController
     @user_role = UserRole.find(params[:id])
   end
 
+  def update
+    @user_role = UserRole.find(params[:id])
+ 
+    if @user_role.update(user_roles_params)
+      redirect_to @user_role
+    else
+      render 'edit'
+    end
+  end
+
   private
 	  def user_roles_params
 	    params.require(:user_role).permit(:role_name)
