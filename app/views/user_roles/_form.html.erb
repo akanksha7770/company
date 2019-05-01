@@ -1,0 +1,28 @@
+<%= form_for @user_roles do |f| %>
+ 
+  <% if @user_roles.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@user_roles.errors.count, "error") %> prohibited
+        this user_roles from being saved:
+      </h2>
+      <ul>
+        <% @user_roles.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :role_name %><br>
+    <%= f.text_field :role_name %>
+  </p>
+ 
+ 
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
