@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_01_082900) do
+ActiveRecord::Schema.define(version: 2019_05_02_111313) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 2019_05_01_082900) do
     t.integer "postcode"
     t.date "start_date"
     t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_regions", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "region_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -41,6 +48,16 @@ ActiveRecord::Schema.define(version: 2019_05_01_082900) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.integer "company_id"
+    t.integer "role_id"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.decimal "monthly_charge"
+    t.string "notesblob"
+    t.integer "image_id"
+    t.boolean "active"
+    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

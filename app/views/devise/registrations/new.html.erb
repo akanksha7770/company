@@ -9,6 +9,59 @@
   </div>
 
   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
+  </div>
+  <div class="field">
+    <%= f.label :notesblob %><br />
+    <%= f.text_field :notesblob, autofocus: true, autocomplete: "notesblob" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :company_id %><br />
+    <%= f.text_field :company_id, autofocus: true, autocomplete: "company_id" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :role_id %><br />
+    <%= f.text_field :role_id, autofocus: true, autocomplete: "role_id" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%#= f.text_field :start_date, autofocus: true, autocomplete: "start_date" %>
+    <%= f.date_select :start_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%#= f.text_field :end_date, autofocus: true, autocomplete: "end_date" %>
+    <%= f.date_select :end_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :monthly_charge %><br />
+    <%= f.text_field :monthly_charge, autofocus: true, autocomplete: "monthly_charge" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image_id %><br />
+    <%= f.text_field :image_id, autofocus: true, autocomplete: "image_id" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :active %><br />
+    <%= f.text_field :active, autofocus: true, autocomplete: "active" %>
+  </div>
+
+
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
