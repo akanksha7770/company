@@ -1,0 +1,21 @@
+<h1>Edit city</h1>
+ 
+<%#= render 'form' %>
+ 
+<%= link_to 'Back', city_path %>
+
+<%= form_for :city, url: city_path, method: :put do |f| %>
+
+ 
+  <p>
+    <%= f.label :city_name %><br>
+    <%= f.text_field :city_name %>
+  </p>
+ 
+  
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>

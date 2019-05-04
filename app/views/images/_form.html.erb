@@ -1,0 +1,38 @@
+<%= form_for @images do |f| %>
+ 
+  <% if @images.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@images.errors.count, "error") %> prohibited
+        this images from being saved:
+      </h2>
+      <ul>
+        <% @images.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </p>
+ 
+  <p>
+    <%= f.label :real_name %><br>
+    <%= f.text_field :real_name %>
+  </p>
+
+  <p>
+    <%= f.label :image_name %><br>
+    <%= f.text_field :image_name %>
+  </p>
+ 
+ 
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>

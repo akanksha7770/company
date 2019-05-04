@@ -3,7 +3,7 @@
   <% if @user_regions.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@user_regions.errors.count, "error") %> prohibited
+        <%= pluralize(@user_rrgions.errors.count, "error") %> prohibited
         this user_regions from being saved:
       </h2>
       <ul>
@@ -18,11 +18,13 @@
     <%= f.label :user_id %><br>
     <%= f.text_field :user_id %>
   </p>
- 
+
   <p>
     <%= f.label :region_id %><br>
-    <%= f.text_area :region_id %>
+    <%= f.text_field :region_id %>
   </p>
+ 
+ 
  
   <p>
     <%= f.submit %>

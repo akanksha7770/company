@@ -1,0 +1,21 @@
+<h1>Edit country</h1>
+ 
+<%#= render 'form' %>
+ 
+<%= link_to 'Back', country_path %>
+
+<%= form_for :country, url: country_path, method: :put do |f| %>
+
+ 
+  <p>
+    <%= f.label :country_name %><br>
+    <%= f.text_field :country_name %>
+  </p>
+ 
+  
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>

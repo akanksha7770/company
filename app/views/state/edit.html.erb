@@ -1,0 +1,21 @@
+<h1>Edit state</h1>
+ 
+<%#= render 'form' %>
+ 
+<%= link_to 'Back', state_path %>
+
+<%= form_for :state, url: state_path, method: :put do |f| %>
+
+ 
+  <p>
+    <%= f.label :state_name %><br>
+    <%= f.text_field :state_name %>
+  </p>
+ 
+  
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>

@@ -2,10 +2,12 @@
   <strong>User_id:</strong>
   <%= @user_regions.user_id %>
 </p>
- 
 <p>
   <strong>Region_id:</strong>
   <%= @user_regions.region_id %>
 </p>
 
-<%= link_to 'Back', user_regions_path %>
+<%= link_to 'Edit', edit_user_region_path %>
+<%= link_to 'Back',  new_user_region_path %>
+ 
+

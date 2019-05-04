@@ -1,0 +1,28 @@
+<h1>Listing images</h1>
+ 
+<%= link_to 'My images', controller: 'images' %>
+<%= link_to 'New images', new_image_path %>
+<table>
+  <tr>
+    <th>User_id</th>
+    <th>Real_name</th>
+    <th>Image_name</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @images.each do |images| %>
+    <tr>
+      <td><%= images.user_id %></td>
+      <td><%= images.real_name %></td>
+      <td><%= images.image_name %></td>
+      <td><%= link_to 'Show', image_path(images) %></td>
+      <td><%= link_to 'Edit', edit_image_path(images) %></td>
+      <td><%= link_to 'Destroy', image_path(images),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+
+    </tr>
+  <% end %>
+</table>
+
+

@@ -1,0 +1,24 @@
+<h1>Listing state</h1>
+ 
+<%= link_to 'My state', controller: 'state' %>
+<%= link_to 'New state', new_state_path %>
+<table>
+  <tr>
+    <th>state_name</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @state.each do |state| %>
+    <tr>
+      <td><%= state.state_name %></td>
+      <td><%= link_to 'Show', state_path(state) %></td>
+      <td><%= link_to 'Edit', edit_state_path(state) %></td>
+      <td><%= link_to 'Destroy', state_path(state),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+
+    </tr>
+  <% end %>
+</table>
+
+
