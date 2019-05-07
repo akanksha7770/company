@@ -11,14 +11,16 @@
   <% @country.each do |country| %>
     <tr>
       <td><%= country.country_name %></td>
-      <td><%= link_to 'Show', country_path(country) %></td>
-      <td><%= link_to 'Edit', edit_country_path(country) %></td>
+      <td><%= link_to 'Show', country_path(country) , :class=>
+      "btn btn-primary"%></td>
+      <td><%= link_to 'Edit', edit_country_path(country), :class=>"btn btn-primary" %></td>
       <td><%= link_to 'Destroy', country_path(country),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+              data: { confirm: 'Are you sure?' }, :class=>"btn btn-primary" %></td>
 
     </tr>
   <% end %>
 </table>
+
 
 

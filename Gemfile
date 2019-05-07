@@ -63,3 +63,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+gem 'country_select', '~> 4.0'
+gem 'chosen-rails'
+gem 'country_state_select'

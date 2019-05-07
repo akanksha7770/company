@@ -1,3 +1,4 @@
+
 <h1>Listing company</h1>
 <%= link_to 'My Company', controller: 'company' %>
  <%= link_to 'New company', new_company_path %>
@@ -16,9 +17,9 @@
   <% @company.each do |company| %>
     <tr>
       <td><%= company.name %></td>
-      <td><%= company.country_id %></td>
-      <td><%= company.state_id %></td>
-      <td><%= company.city_id %></td>
+      <td><%= company.country.try(:country_name) %></td>
+      <td><%= company.state.try(:state_name) %></td>
+      <td><%= company.city.try(:city_name) %></td>
       <td><%= company.postcode %></td>
       <td><%= company.start_date %></td>
       <td><%= company.active %></td>

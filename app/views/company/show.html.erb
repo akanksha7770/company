@@ -4,18 +4,19 @@
 </p>
  
 <p>
-  <strong>Country_id:</strong>
-  <%= @company.country_id %>
+  <strong>Country:</strong>
+  <%= @company.country.try(:country_name) %>
+
 </p>
 
 <p>
   <strong>State_id:</strong>
-  <%= @company.state_id %>
+  <%= @company.state.try(:state_name) %>
 </p>
 
 <p>
   <strong>City_id:</strong>
-  <%= @company.city_id %>
+  <%= @company.city.try(:city_name) %>
 </p>
 
 <p>
