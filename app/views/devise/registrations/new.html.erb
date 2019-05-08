@@ -38,7 +38,7 @@
     <%= f.date_select :start_date %>
   </div>
 
-  <div class="field">
+  <div class="field datepicker">
     <%= f.label :end_date %><br />
     <%#= f.text_field :end_date, autofocus: true, autocomplete: "end_date" %>
     <%= f.date_select :end_date %>
@@ -80,5 +80,9 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
-
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+</script
 

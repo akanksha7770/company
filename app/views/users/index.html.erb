@@ -1,0 +1,15 @@
+<h1>Listing users</h1>
+
+<table>
+  <tr> 
+    <th>email</th>
+
+  </tr>
+  <% @users.each do |u| %>
+    <tr>
+      <td><a href="/users/<%= u.id %>"><%= u.email %></a></td>
+      <!-- <td><a href="/users/<%= u.id %>/edit"><%= u.first_name %> -->
+      </a></td>
+    </tr>
+  <% end %>
+</table>
